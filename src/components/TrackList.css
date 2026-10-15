@@ -1,0 +1,197 @@
+.tracklist-container {
+  padding: 0 32px 64px 32px;
+  background: linear-gradient(180deg, rgba(18, 18, 18, 0.7) 0%, var(--bg-base) 180px);
+  position: relative;
+  min-height: 400px;
+}
+
+/* 1. Action Bar */
+.tracklist-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0 20px 0;
+}
+
+.action-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.playlist-main-play-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--spotify-green);
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.playlist-main-play-btn:hover {
+  transform: scale(1.05);
+  background-color: var(--spotify-green-hover);
+}
+
+.playlist-main-play-btn:active {
+  transform: scale(0.96);
+}
+
+.play-triangle-main-offset {
+  margin-left: 3px;
+}
+
+.playlist-action-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.playlist-action-icon-btn:hover {
+  color: var(--text-primary);
+  transform: scale(1.06);
+}
+
+.playlist-action-icon-btn.liked {
+  color: var(--spotify-green);
+}
+
+/* Action Bar Right: In-playlist search & sort */
+.action-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.playlist-search-inline {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 500px;
+  padding: 4px 12px;
+  gap: 8px;
+}
+
+.inline-search-icon {
+  color: var(--text-muted);
+}
+
+.inline-search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-size: 13px;
+  width: 140px;
+}
+
+.close-inline-search {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.close-inline-search:hover {
+  color: var(--text-primary);
+}
+
+.playlist-tool-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  padding: 6px;
+  border-radius: 50%;
+  transition: color var(--transition-fast);
+}
+
+.playlist-tool-btn:hover {
+  color: var(--text-primary);
+}
+
+.sort-btn {
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 8px;
+}
+
+.sort-label {
+  color: var(--text-muted);
+}
+
+/* 2. Sticky Table Header Row */
+.tracklist-header-row {
+  position: sticky;
+  top: 64px;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: 40px minmax(220px, 4fr) minmax(140px, 3fr) minmax(100px, 2fr) 110px;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: var(--bg-base);
+  margin-bottom: 8px;
+  color: var(--text-subtle);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  user-select: none;
+}
+
+.th-col {
+  display: flex;
+  align-items: center;
+}
+
+.th-index {
+  justify-content: center;
+}
+
+.th-duration {
+  justify-content: flex-end;
+}
+
+/* 3. Tracklist Rows */
+.tracklist-rows-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tracklist-empty-state {
+  padding: 48px 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .tracklist-container {
+    padding: 0 20px 48px 20px;
+  }
+
+  .tracklist-header-row {
+    grid-template-columns: 36px minmax(200px, 4fr) minmax(120px, 2fr) 90px;
+  }
+  .th-date {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .tracklist-header-row {
+    grid-template-columns: 32px minmax(180px, 1fr) 70px;
+  }
+  .th-album,
+  .th-date {
+    display: none;
+  }
+}

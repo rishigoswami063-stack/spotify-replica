@@ -1,0 +1,172 @@
+.spotify-sidebar {
+  width: 240px;
+  min-width: 240px;
+  max-width: 240px;
+  height: 100%;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px 16px 16px;
+  user-select: none;
+  overflow-y: auto;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* 1. Official Brand Header */
+.sidebar-brand-container {
+  margin-bottom: 24px;
+  padding-left: 8px;
+}
+
+.spotify-brand-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #ffffff;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.spotify-brand-btn:hover {
+  opacity: 0.95;
+  transform: scale(1.02);
+}
+
+.spotify-circle-logo-svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+.spotify-brand-text {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  color: #ffffff;
+  line-height: 1;
+}
+
+/* 2. Primary Navigation */
+.sidebar-primary-nav {
+  margin-bottom: 28px;
+}
+
+.sidebar-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar-nav-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
+  color: #b3b3b3;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.sidebar-nav-btn:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.sidebar-nav-btn.active {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.sidebar-nav-icon {
+  flex-shrink: 0;
+}
+
+/* 3. PLAYLISTS Section */
+.sidebar-playlists-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.playlists-category-heading {
+  padding: 8px 12px 10px 12px;
+}
+
+.playlists-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #b3b3b3;
+  text-transform: uppercase;
+}
+
+.playlists-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.playlist-menu-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 9px 12px;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
+  color: #b3b3b3;
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.playlist-menu-item:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.playlist-menu-item.active {
+  color: #ffffff;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.playlist-menu-icon {
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.playlist-menu-item:hover .playlist-menu-icon,
+.playlist-menu-item.active .playlist-menu-icon {
+  opacity: 1;
+}
+
+.playlist-menu-icon.icon-liked {
+  color: #ffffff;
+}
+
+.playlist-menu-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,54 @@
+.spotify-app-shell {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 3-Column Layout Container: Left (Sidebar) + Middle (MainContent) + Right (RightSidebar) */
+.spotify-app-body {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: calc(100vh - 90px);
+  width: 100%;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+/* Responsive Handling */
+@media (max-width: 1040px) {
+  .spotify-right-sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .spotify-sidebar {
+    width: 72px;
+    min-width: 72px;
+    max-width: 72px;
+    padding: 16px 8px;
+  }
+
+  .spotify-brand-text,
+  .sidebar-nav-label,
+  .playlists-category-heading,
+  .playlists-menu-list {
+    display: none;
+  }
+
+  .sidebar-brand-container {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sidebar-nav-btn {
+    justify-content: center;
+    padding: 12px 0;
+  }
+}
